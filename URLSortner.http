@@ -1,0 +1,6 @@
+@URLSortner_HostAddress = http://localhost:5170
+
+GET {{URLSortner_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
