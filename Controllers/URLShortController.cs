@@ -7,7 +7,7 @@ using URLSortner.Model;
 namespace URLSortner.Controllers
 {
     //[ApiController]
-    [Route("api/")]
+    [Route("api/[Controller]/")]
     [EnableCors("Public_Origin")]
 
     public class URLShortController : ControllerBase

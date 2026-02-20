@@ -1,6 +1,24 @@
-@URLSortner_HostAddress = http://localhost:5170
+@URLSortner_HostAddress = https://localhost:8081
 
-GET {{URLSortner_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{URLSortner_HostAddress}}/api/Create
+Content-Type: application/json
+
+{
+  //CreateRequest
+}
+
+###
+
+POST {{URLSortner_HostAddress}}/api/Resolve/p
+Content-Type: application/json
+
+{
+  //Redirect_Password
+}
+
+###
+
+@shortID=string
+GET {{URLSortner_HostAddress}}/api/Resolve/{{shortID}}
 
 ###
