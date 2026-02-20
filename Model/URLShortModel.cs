@@ -1,7 +1,6 @@
 namespace URLSortner.Model
 {
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations.Schema;
     using URLSortner.Utils;
     public class URLShort
@@ -38,13 +37,13 @@ public class CreateRequest
 public class ShortResponse
 {
     public string URL { get; set; }
-    public ShortResponse(string URL)=>this.URL=URL;
+    public ShortResponse(string URL) => this.URL = URL;
 }
 public class RedirectFail
 {
     public string shortID { get; set; }
     public string message { get; set; }
-    public RedirectFail(string shortID, string messsage="Password Required")
+    public RedirectFail(string shortID, string messsage = "Password Required")
     {
         this.shortID = shortID;
         this.message = message;

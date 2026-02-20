@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,12 +43,8 @@ var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
-
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors();
-app.UseAuthentication();
-app.UseAuthorization();
-
 app.MapControllers();
 app.Run();
