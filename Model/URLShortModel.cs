@@ -55,7 +55,7 @@ public class RedirectSuccess
     public string originalURL { get; set; }
     public RedirectSuccess(string originalURL) { this.originalURL = originalURL; }
 }
-public class RedirectBodyWithPassword
+public class Redirect_Password
 {
     public string shortID { get; set; }
     public string password { get; set; }

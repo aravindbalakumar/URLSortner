@@ -18,10 +18,10 @@ namespace URLSortner.Controllers
             this._dbContext = _dbContext;
         }
         [EnableCors("Public_Origin")]
-        [HttpGet("/Resolve/p")]
-        public async Task<ActionResult> Atuhorize_RedirectToSource([FromBody] RedirectBodyWithPassword body)
+        [HttpPost("/Resolve/p")]
+        public async Task<ActionResult> Atuhorize_RedirectToSource([FromBody] Redirect_Password body)
         {
-            var variable = await GetExistingShortID(body.password);
+            var variable = await GetExistingShortID(body.shortID);
             if (string.Equals(variable.Password, body.password)) 
             {
                 return Ok(new RedirectSuccess(variable.OriginalURL));
